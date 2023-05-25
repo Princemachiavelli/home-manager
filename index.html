@@ -80,8 +80,8 @@ home-manager.users.eve = { pkgs, ... }: {
   home.packages = [ pkgs.atool pkgs.httpie ];
   programs.bash.enable = true;
 };</pre><p>and after a <code class="literal">sudo nixos-rebuild switch</code> the user eve’s environment should
-include a basic Bash configuration and the packages atool and httpie.</p><div class="note"><h3 class="title">Note</h3><p>If <code class="literal">nixos-rebuild switch</code> does not result in the environment you expect,
-you can take a look at the output of the Home Manager activation script output using</p><pre class="programlisting console">$ systemctl status "home-manager-$USER.service"</pre></div><p>If you do not plan on having Home Manager manage your shell
+include a basic Bash configuration and the packages atool and httpie.</p><div class="note"><h3 class="title">Note</h3><p>If after a <code class="literal">nixos-rebuild switch</code> you <span class="strong"><strong>don’t</strong></span> have the environment
+you expect, you can take a look at home-manager’s output with</p><pre class="programlisting bash">journalctl SYSLOG_IDENTIFIER=hm-activate-$USER</pre></div><p>If you do not plan on having Home Manager manage your shell
 configuration then you must add either</p><pre class="programlisting bash">. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"</pre><p>or</p><pre class="programlisting bash">. "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh"</pre><p>to your shell configuration, depending on whether
 <a class="xref" href="nixos-options.html#nixos-opt-home-manager.useUserPackages"><code class="option">home-manager.useUserPackages</code></a> is enabled. This file can
 be sourced directly by POSIX.2-like shells such as <a class="link" href="https://www.gnu.org/software/bash/" target="_top">Bash</a> or
