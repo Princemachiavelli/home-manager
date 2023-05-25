@@ -505,6 +505,23 @@ in
         for more information.
       '';
     };
+
+    configPath = mkOption {
+      type = types.path;
+      internal = true;
+      description = ''
+        Path to the ssh configuration.
+      '';
+    };
+
+    internallyManaged = mkOption {
+      type = types.bool;
+      default = true;
+      internal = true;
+      description = ''
+        Whether to link .ssh/config to programs.ssh.configPath
+      '';
+    };
   };
 
   config = mkIf cfg.enable {
@@ -529,7 +546,9 @@ in
 
     home.packages = [ cfg.package ];
 
-    home.file.".ssh/config".text =
+    home.file.".ssh/config".source = mkIf cfg.internallyManaged cfg.configPath;
+
+    programs.ssh.configPath =
       let
         sortedMatchBlocks = hm.dag.topoSort cfg.matchBlocks;
         sortedMatchBlocksStr = builtins.toJSON sortedMatchBlocks;
@@ -537,7 +556,7 @@ in
           if sortedMatchBlocks ? result
           then sortedMatchBlocks.result
           else abort "Dependency cycle in SSH match blocks: ${sortedMatchBlocksStr}";
-      in ''
+      in pkgs.writeText "ssh_config" ''
       ${concatStringsSep "\n" (
         (mapAttrsToList (n: v: "${n} ${v}") cfg.extraOptionOverrides)
         ++ (optional (cfg.includes != [ ]) ''
