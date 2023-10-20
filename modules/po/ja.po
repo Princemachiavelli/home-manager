@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Home Manager Modules\n"
 "Report-Msgid-Bugs-To: https://github.com/nix-community/home-manager/issues\n"
-"POT-Creation-Date: 2023-05-27 09:08+0200\n"
-"PO-Revision-Date: 2023-05-13 06:48+0000\n"
-"Last-Translator: Markus Amano <markus.a.amano@gmail.com>\n"
+"POT-Creation-Date: 2023-09-13 23:46+0200\n"
+"PO-Revision-Date: 2023-06-12 10:49+0000\n"
+"Last-Translator: Jeff Ames <jeff@anjefu.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/home-manager/"
 "modules/ja/>\n"
 "Language: ja\n"
@@ -35,7 +35,7 @@ msgstr "世代 %s のプロファイルを生成しています"
 msgid "No change so reusing latest profile generation %s"
 msgstr "変更されていないので最新の世代 %s のプロファイルを再利用します"
 
-#: modules/home-environment.nix:627
+#: modules/home-environment.nix:640
 msgid ""
 "Oops, Nix failed to install your new Home Manager profile!\n"
 "\n"
@@ -63,7 +63,7 @@ msgstr ""
 "\n"
 "で競合を解消し、再度Home Managerの設定を試してください。"
 
-#: modules/home-environment.nix:660
+#: modules/home-environment.nix:673
 msgid "Activating %s"
 msgstr "%s を有効化しています"
 
@@ -110,11 +110,11 @@ msgstr ""
 
 #: modules/lib-bash/activation-init.sh:95
 msgid "Error: USER is set to \"%s\" but we expect \"%s\""
-msgstr ""
+msgstr "エラー: USER は \"%s\" に設定されていますが、\"%s\" が期待されています"
 
 #: modules/lib-bash/activation-init.sh:104
 msgid "Error: HOME is set to \"%s\" but we expect \"%s\""
-msgstr ""
+msgstr "エラー: HOME は \"%s\" に設定されていますが、\"%s\" が期待されています"
 
 #: modules/lib-bash/activation-init.sh:119
 msgid "Starting Home Manager activation"

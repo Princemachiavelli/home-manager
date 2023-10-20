@@ -19,6 +19,12 @@
     githubId = 56743515;
     name = "Morgane Austreelis";
   };
+  Avimitin = {
+    name = "Avimitin";
+    email = "dev@avimit.in";
+    github = "Avimitin";
+    githubId = 30021675;
+  };
   blmhemu = {
     name = "blmhemu";
     email = "19410501+blmhemu@users.noreply.github.com";
@@ -36,6 +42,12 @@
     email = "86011416+CarlosLoboxyz@users.noreply.github.com";
     github = "CarlosLoboxyz";
     githubId = 86011416;
+  };
+  cvoges12 = {
+    name = "Clayton Voges";
+    email = "38054771+cvoges12@users.noreply.github.com";
+    github = "cvoges12";
+    githubId = 38054771;
   };
   d-dervishi = {
     email = "david.dervishi@epfl.ch";
@@ -159,6 +171,12 @@
     github = "mifom";
     githubId = 23462908;
   };
+  nikp123 = {
+    name = "nikp123";
+    email = "nikp123@users.noreply.github.com";
+    github = "nikp123";
+    githubId = 4696350;
+  };
   nilp0inter = {
     name = "Roberto Abdelkader Martínez Pérez";
     email = "robertomartinezp@gmail.com";
@@ -239,6 +257,12 @@
     githubId = 605641;
     name = "Bart Bakker";
   };
+  ilaumjd = {
+    name = "Ilham AM";
+    email = "ilaumjd@gmail.com";
+    github = "ilaumjd";
+    githubId = 16514431;
+  };
   jrobsonchase = {
     email = "josh@robsonchase.com";
     github = "jrobsonchase";
@@ -287,6 +311,12 @@
     github = "nurelin";
     githubId = 5276274;
   };
+  otavio = {
+    email = "otavio.salvador@ossystems.com.br";
+    github = "otavio";
+    githubId = 25278;
+    name = "Otavio Salvador";
+  };
   pltanton = {
     name = "pltanton";
     email = "plotnikovanton@gmail.com";
@@ -328,6 +358,18 @@
     email = "sebtm@users.noreply.github.com";
     github = "sebtm";
     githubId = 17243347;
+  };
+  shimunn = {
+    name = "shimun";
+    email = "home-manager.c.shimun@shimun.net";
+    github = "shimunn";
+    githubId = 41011289;
+  };
+  rasmus-kirk = {
+    name = "Rasmus Kirk";
+    email = "mail@rasmuskirk.com";
+    github = "rasmus-kirk";
+    githubId = 57323869;
   };
   rosuavio = {
     name = "Rosario Pulella";
@@ -393,5 +435,17 @@
     email = "nate@natecox.dev";
     github = "natecox";
     githubId = 2782695;
+  };
+  pedorich-n = {
+    name = "Mykyta Pedorich";
+    email = "pedorich.n@gmail.com";
+    github = "pedorich-n";
+    githubId = 15573098;
+  };
+  liyangau = {
+    name = "Li Yang";
+    email = "d@aufomm.com";
+    github = "liyangau";
+    githubId = 71299093;
   };
 }
